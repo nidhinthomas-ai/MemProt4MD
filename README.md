@@ -2,6 +2,8 @@
 
 A tool to embed transmembrane proteins into lipid membranes for MD simulations using PPM and Packmol.
 
+![Alt text](./example/6vn7/6vn7_packmol_output.png)
+
 ## MemProt4MD
 This tool is designed to generate the input structures for perform equilibrium MD simulations of proteins embedded in lipid bilayers. User is expected to have fundamental knowledge about proteins, lipid membranes, and experience with python and bash scripting. This tool integrates two tools commonly used for generating Protein-Lipid membrane complexes: PPM3 and Packmol. Users can either orient the protein with respect to a dummy lipid membrane using this tool or download the pre-oriented protein from PPM 3.0 web server. The tool includes the following:
 
@@ -81,8 +83,6 @@ PACKMOL-MEMGEN is pre-installed in AMBER module. When AMBER is loaded onto the t
 ### 4. Visualization
 
 To ensure that the protein is properly embedded in the bilayer and the system is solvated appropriately, visualize the system using nglview or other tools such as PyMol or UCSF ChimeraX.
-
-![Alt text](./example/6vn7/6vn7_packmol_output.png)
 
 ### 5. Running the whole workflow from the terminal
 
