@@ -1,0 +1,28 @@
+  1 .//6vn7_chAB_protona.//6vn7_chAB_protona
+ 0 OPC in  .//6vn7_chAB_protonated.pdb                                                     
+non-sequential residue numbering or gaps in TM sec. struct. A  172
+this sec.struct. may be shortened
+    8 possible transmembrane secondary structure segments
+   1 A  134  170  37
+   2 A  182  201  20
+   3 A  216  235  20
+   4 A  251  277  27
+   5 A  291  324  34
+   6 A  336  348  13
+   7 A  355  366  12
+   8 A  367  397  31
+Possible transmembrane protein, checking... 
+N interact. lipids:  25
+#.//6;A; 15;142-166,174-177,179,181-195,217-235,237-241,254-276,292-316,339-352,354-362,364,367-391,399,406
+#.//6;B; 15;2-5
+A 144 166    30.  -12.1
+A 182 195     7.   -6.9
+A 217 235    29.   -2.7
+A 255 276    12.  -14.4
+A 293 316    30.  -11.2
+A 339 348    47.   -3.7
+A 355 362    24.   -5.1
+A 367 392    31.  -12.0
+TMH contribution:   -68.1
+Tilt angle:   11.9
+.//6vn7_ch emin=   -59.0 thickn= 30.4+- 0.8 tilt=    12.+-    2.
