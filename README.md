@@ -51,6 +51,8 @@ python ${script_dir}/pdbGMXprep.py --pkafile ${destination}/${pdbname}.pka --pH 
 }  
 </pre>
 
+![Alt text](./example/6vn7/6vn7_ppm_output.png)
+
 ### 2. Generating the correct orientation of proteins within lipid membranes using PPM3 local version
 Typically, the orientation of transmembrane proteins in lipid membranes are determined from OPM database or by running it in PPM server. Howeve, they also provide a local version of this software and that has been added to this pipeline under "PPM" directory. The correct orientation of the protein with respect to a planar membrane is determined by embedding the protein into a DOPC bilayer. The details of the protocol and the collection of output results are provided in the link below. You can also find a detailed instruction from the orignal authors in a word document in PPM directory under the name "ppm3_instructions.docx".PPM3 requires gfortran. The format of the input file (*.inp) is given in "example" directory. The example bash script is given below. The executable and input files are all expected to be in the same working directory.
 
@@ -79,3 +81,11 @@ PACKMOL-MEMGEN is pre-installed in AMBER module. When AMBER is loaded onto the t
 ### 4. Visualization
 
 To ensure that the protein is properly embedded in the bilayer and the system is solvated appropriately, visualize the system using nglview or other tools such as PyMol or UCSF ChimeraX.
+
+![Alt text](./example/6vn7/6vn7_packmol_output.png)
+
+### 5. Running the whole workflow from the terminal
+
+To run the entire workflow including cleaning the protein, protein re-orientation and protein insertion into custom lipid membrane, run the following command:
+
+`bash ./src/Protein_Prep.sh --input ./example/6vn7/6vn7_chAB.pdb --dest ./example/ --chain AB`
