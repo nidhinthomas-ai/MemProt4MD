@@ -36,7 +36,6 @@ Packmol is provided with AmberTools. AmberTools is installed along with Amber so
 The input protein structure may have problems with the protonation state of the residues, terminis and disulfide bond definition. These problems could originate by the way these structures were generated. Therefore, the input structures need to be cleaned well prior to any modeling. I highly recommend using preliminary cleaning of the pdb file using tools such as "pdb-tools" or Parmed or any other simple PDB editing tools. Structures from Rosetta may have residue-level energy values written at the end of the PDB files. These lines should be deleted during this stage to obtain reasonable structures without failure. Just like GROMACS workflow, the input PDB structure should be checked for proper protonation. If the protonation states of the residues are different from the original files, user can essentially see those suggestions from PROPKA and PDB2PQR. If the protonation state, recommended is different than the original information, pdbGMXprep.py will read the output from PROPKA and modify the input PDB files to reflect the correct protonation states suggested by PROPKA. GROMACS typically determines the salt bridge states during "pdb2gmx". However, the disulfide bonds in the proteins or between proteins, in AMBER MD package are determined during the initial phase itself. Correct naming of the chain IDs, residues, and termini are required to successfully run these steps.  
 
 <pre>
-```
 function pqr2pdb () {
 inputPDB=$1
 script_dir=$2
@@ -50,7 +49,6 @@ mv ${pdbname}.pka ${destination}/${pdbname}.pka
 python ${script_dir}/pdbGMXprep.py --pkafile ${destination}/${pdbname}.pka --pH 7.4 \
     --mutatedPDB ${destination}/${pdbname}_protonated.pdb --pdb ${destination}/${pdbname}_pka7.pdb
 }  
-```
 </pre>
 
 ### 2. Generating the correct orientation of proteins within lipid membranes using PPM3 local version
